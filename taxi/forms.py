@@ -1,8 +1,11 @@
 from django import forms
 from django.contrib.auth import get_user_model
 
-from taxi.models import Driver, Car
+from taxi.models import Car
 from taxi.validators import validate_license_number
+
+
+Driver = get_user_model()
 
 
 class DriverLicenseUpdateForm(forms.ModelForm):
